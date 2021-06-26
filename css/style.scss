@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap');
+
+// === mixin ===
+@mixin montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+@mixin list-null {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// === /mixin ===
+// === variables ===
+$base: 4px;
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-18: 18px;
+$fs-36: 36px;
+$line-h: 1.5;
+
+$color-gray: #7B7B7B;
+$color-gray-light: #c4c4c4;
+$color-gray-dark: #282828;
+$color-gold: #998431;
+$color-black: #000;
+$color-white: #fff;
+$color-gold-light: #E6E3C4;
+
+$padding-top: 140px;
+$padding-bottom: 100px;
+
+// === variables ===
+// === common ====
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    transition: .2s ease-in-out;
+ }
+ 
+ html, body {
+     height: 100%;
+ }
+
+ ul {
+    list-style: none;
+ }
+
+ a {
+    text-decoration: none;
+    outline: none;
+ }
+
+ img {
+    display: block;
+}
+
+ h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display';
+    font-weight: regular;
+    letter-spacing: 1px;
+}
+
+body {
+    @include montserrat();
+    color: $color-white;
+    font-size: $fs-16;
+    line-height: $line-h;
+}
+
+.btn-gold {
+    width: 200px;
+    height: 53px;
+    border: none;
+    border-width: 2px;
+    background-color: $color-gold;
+    text-transform: uppercase;
+    color: $color-white;
+    
+    &:focus {
+        background-color:darken($color-gold, 10%);
+    }
+    
+    &:hover {
+        background-color:darken($color-gold, 10%);
+    }
+    
+    &:active {
+        color:$color-gold-light;
+    }
+}
+
+.btn-line {
+    width: 540px;
+    height: 50px;
+    border: 1px solid $color-white;
+    background-color: $color-gray-dark;
+    color: $color-white;
+    text-transform: uppercase;
+        
+    &:focus {
+        background-color:lighten($color-gray-dark, 10%);
+    }
+    
+    &:hover {
+        background-color:lighten($color-gray-dark, 10%);
+    }
+   
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-activ {
+    color: $color-gold;
+}
+
+// === /common ====
+
+// === header ====
+
+.wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.main__header {
+    max-width: 1920px;
+    height: 900px;
+    background: url('/img/header-bg.png') no-repeat 50% 50%;
+    padding-bottom: 100px;
+    margin: 0 auto;
+
+    &-info {
+        font-size: $fs-13;
+        padding: 30px 0;
+    }
+    
+    &-item {
+        width:100%;
+        text-align: center;
+        border: 1px solid $color-white;
+        padding: 15px;
+    }
+
+    &-nav {
+        margin-bottom: 580px;
+    }
+
+    :first-child {
+            border-left: none;
+        }
+
+    :last-child {
+            border-right: none;
+        }
+        
+
+
+    &-btn-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        :first-child {
+            margin-right: 30px;
+        }
+    }
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+// === /header ====
+// === text ====
+
+.text {
+    background-color: $color-gray-dark;
+    padding: 100px 0;
+}
+
+.text-wrapper {
+    max-width: 1110px;
+    margin: 0 auto;
+    border: 3px solid $color-gray-light;
+    padding: 60px 160px;
+    
+    h1 {
+        @include playfair();
+        font-size: $fs-36;
+        font-weight: $fw-bold;
+        margin-bottom: 80px;
+        position: relative;
+        
+        &:after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 160px;
+            background: $color-white;
+            position: absolute;
+            left: 300px;
+            top: 90px;
+        }
+    }    
+    
+    p {
+        margin-bottom: 50px; 
+    } 
+}
+
+.glass img {
+    width: 100%;
+}
+
+.header-link {
+    color: $color-white;
+    font-size: $fs-14;
+    line-height: 1.5;
+
+    &:focus {
+        color:darken($color-white, 25%);
+    }
+
+    &:hover {
+        color:darken($color-white, 25%);
+    }
+    
+    &:active {
+        color:$color-gold;
+    }
+
+}
+
+.activ-link {
+    color: $color-gold;
+}
+
+// === COLLECTION ====
+.collection {
+    background-color: $color-gold-light;
+    
+    &-wrapper {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        border-top: 3px solid $color-gray;
+        border-bottom: 3px solid $color-gray;
+        padding: 140px 0;
+        color: $color-black;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 1110px;
+            background: $color-gold;
+            position: absolute;
+            top: 80px;
+            
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 1110px;
+            background: $color-gold;
+            position: absolute;
+            bottom: 70px;
+        }    
+
+
+        h2 {
+            margin: 30px 0;
+            position: relative;
+            font-weight: $fw-bold;
+            font-size: $fs-36;
+        
+            &::after {
+                content: '';
+                display: block;
+                height: 1px;
+                width: 300px;
+                background: $color-gold;
+                position: absolute;
+                top: 120px;
+            }
+        }
+    } 
+    
+
+    &-left {
+        flex-basis: 50%;
+        padding-left: 30px;
+    }
+
+    &-rigth {
+        flex-basis: 50%;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+    width: 445px;
+}
+
+table td {
+     border: 1px solid $color-black;
+}
+
+.table-1 {
+    font-weight: $fw-regular;
+    font-size: $fs-14;
+}
+
+.table-2{
+    @include playfair();
+    font-weight: $fw-bold;
+    font-size: $fs-18;
+}
+
+td {
+    padding: 10px 10px;
+}
+
+p {
+    padding: 30px 0;
+}
+
+.collection-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px 30px;
+    }
+
+.grid-container { 
+    grid-area: 1 / 1 / 4 / 3;
+}
+
+.img-1 { 
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.img-2 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.img-3 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+// === /COLLECTION ====
+// === FORM ====
+
+.site-form {
+    max-width: 1920px;
+    height: 767px;
+    background-color: $color-gray-dark;
+    padding: 80px;
+    margin: 0 auto;
+
+    &-wrapper {
+        margin: 0 auto;
+        max-width: 1110px;
+        padding: 90px 0;
+        border:2px solid $color-gray-light;
+    }
+
+    &-container {
+        position: relative;
+        text-align: center;
+        z-index: 0;
+        align-items: center;
+        
+        p {
+            width: 540px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.site-form-text-h2 {
+    font-size: $fs-36;
+    text-align: center;
+    top: -120px;
+    left: 350px;
+    position: absolute;
+    z-index: 10;
+    background-color: $color-gray-dark;
+    padding: 0 10px;
+}
+
+hr {
+    width: 118px;
+    height: 1px;
+    background-color:$color-white;
+    margin: 0 auto;    
+}
+
+.site-form-img-first {
+    position: absolute;
+    top: -170px;
+    left: -20px;
+}
+
+.site-form-img-second {
+    position: absolute;
+    top: -150px;
+    right: -50px;
+}
+
+.site-form__form {
+    align-items: center;
+    // height: 250px;
+    padding: 60px;
+    
+    input {
+        color: $color-white;
+        width: 255px;
+        height: 32px;
+        border-bottom: 1px solid $color-white;
+        background-color: $color-gray-dark;
+        display: block;
+    }  
+}
+
+.site-form__form-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    :nth-child(2) {
+        margin-right: 30px; 
+    }
+}
+
+#address {
+   margin: 0 auto;
+   margin-bottom: 50px;
+   width: 540px;
+} 
+
+.value {
+    font-size: $fs-13;
+    font-weight: $fw-medium;
+    color: $color-white;
+}
+
+// === /FORM ====
+
+// === FOOTER ====
+
+.footer {
+    max-width: 1920px;
+    height: 220px;
+    background-color: $color-gold;
+    padding: 50px;
+    color: $color-white;
+    margin: 0 auto;
+
+    &-container {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+        padding: 20px;
+    }
+
+    &__item-link {
+        color: $color-white;
+        font-size: $fs-14;
+        line-height: 1.5;
+
+        &:focus {
+            color:darken($color-white, 25%);
+        }
+    
+        &:hover {
+            color:darken($color-white, 25%);
+        }
+        
+        &:active {
+            color:$color-gold;
+        }
+    }
+}
+
+.footer-submenu {
+    
+    &-list {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid $color-white;
+        
+        :not(:first-child) {
+            border-left: 1px solid $color-white;
+            padding-left: 50px;
+        }
+    }
+
+    &__item {
+        padding: 25px;
+        flex-basis: auto;
+    }
+
+    &__item-link {
+        color: $color-white;
+        font-size: $fs-14;
+        line-height: 1.5;
+        flex-basis: 1;
+        text-transform: uppercase;
+        padding-left: 20px;
+
+        &:focus {
+            color:darken($color-white, 25%);
+        }
+    
+        &:hover {
+            color:darken($color-white, 25%);
+        }
+        
+        &:active {
+            color:$color-gold;
+        }
+    }
+}
+
+.activ-link{
+    color: $color-gray-dark;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    .social__link {
+        border:none;
+     }
+}
+
+svg:hover path {
+      fill: #e4ddbd;
+}
+
+// === /FOOTER ====
