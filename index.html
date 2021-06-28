@@ -23,16 +23,16 @@
                     <nav>
                         <ul class="flexbox nav">
                             <li class="main__header-item">
-                                <a href="#" class="header-link activ-link">Каталог</a>
+                                <a href="#" class="header-link activ-link" aria-label="nav">Каталог</a>
                             </li>
                             <li class="main__header-item">
-                                <a href="#" class="header-link">Доставка</a>
+                                <a href="#" class="header-link" aria-label="nav1">Доставка</a>
                             </li>
                             <li class="main__header-item">
-                                <a href="#" class="header-link">Коллекция</a>
+                                <a href="#" class="header-link" aria-label="nav2">Коллекция</a>
                             </li>
                             <li class="main__header-item">
-                                <a href="#" class="header-link">Контакты</a>
+                                <a href="#" class="header-link" aria-label="nav3">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -75,7 +75,7 @@
                     </p>
                     
                     
-                    <table width="445"  cellpadding="4" cellspacing="0">
+                    <table>
                         <tr> 
                             <td rowspan="2" class="table-1">1980</td>
                             <td class="table-2">Colli Euganei Bianco Ca' Lustra 1980</td>
@@ -99,7 +99,6 @@
                         </tr>
                     </table>
                     
-                </table>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing.
                     Pellentesque nisi, mi sit non sit sed fermentum. Felis adipiscing morbi sodales ac.
                 </p>
@@ -110,13 +109,13 @@
             <div class="collection-right">
                 <div class="grid-container"></div>
                 <div class="img-1">
-                    <img src="/img/collection-1.png" alt="wine-1" width="540px" height="500px">
+                    <img src="/img/collection-1.png" alt="wine-1" width="540" height="500">
                 </div>
                 <div class="img-2">
-                    <img src="/img/collection-2.png" alt="wine-2" width="255px" height="228px">
+                    <img src="/img/collection-2.png" alt="wine-2" width="255" height="228">
                 </div>
                 <div class="img-3">
-                    <img src="/img/collection-3.png" alt="wine-3" width="255px" height="228px">
+                    <img src="/img/collection-3.png" alt="wine-3" width="255" height="228">
                 </div>
             </div>
         </div>
@@ -130,23 +129,23 @@
     <section class="site-form">
         <div class="site-form-wrapper">
             <div class="site-form-container">
-                <img src="/img/form-1.svg" alt="wine-1" width="260px" height="260px" class="site-form-img-first">
+                <img src="/img/form-1.svg" alt="wine-1" width="260" height="260" class="site-form-img-first">
                 <h2 class="site-form-text-h2">Запись на дегустацию</h2>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in
                    hac id imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. </p>
-                <form action="" class="site-form__form">
+                <form class="site-form__form">
                     <div class="site-form__form-top">
-                        <label for="name"></label>
+                        <label for="name" aria-label="name"></label>
                         <input class="value" type="text" value="Имя" id="name" name="name">
-                        <label for="phone"></label>
+                        <label for="phone" aria-label="phone"></label>
                         <input class="value" type="text" value="Телефон" id="phone" name="phone">
                     </div>
-                    <label for="address"></label>
+                    <label for="address" aria-label="address"></label>
                     <input class="address value" type="text" value="Бутик на Невском" id="address" name="address">
                     <button class="btn-line">записаться</button> 
                 </form> 
-                <img src="/img/form-2.svg" alt="wine-2" width="260px" height="200px" class="site-form-img-second">
+                <img src="/img/form-2.svg" alt="wine-2" width="260" height="200" class="site-form-img-second">
             </div>
         </div>
     </section>
@@ -159,25 +158,25 @@
                 <nav>
                     <ul class="footer-list flexbox">
                         <li class="footer__item">
-                            <a href="#" class="footer__item-link activ-link">Главная</a>
+                            <a href="#" class="footer__item-link activ-link" aria-label="main">Главная</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__item-link">Каталог</a>
+                            <a href="#" class="footer__item-link" aria-label="catalog">Каталог</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__item-link">Поставщикам</a>
+                            <a href="#" class="footer__item-link" aria-label="couriers">Поставщикам</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__item-link">Коллекции</a>
+                            <a href="#" class="footer__item-link" aria-label="collection">Коллекции</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__item-link">Дегустация</a>
+                            <a href="#" class="footer__item-link" aria-label="degustation">Дегустация</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__item-link">Коллекция 2020</a>
+                            <a href="#" class="footer__item-link" aria-label="collection 2020">Коллекция 2020</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#" class="footer__item-link">Контакты</a>
+                            <a href="#" class="footer__item-link" aria-label="contacts">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -187,10 +186,10 @@
                 <nav>
                     <ul class="footer-submenu-list flexbox">
                         <li class="footer-submenu__item">
-                            <a href="#" class="footer-submenu__item-link">винный бутик LE CORTE</a>
+                            <a href="#" class="footer-submenu__item-link" aria-label="butic">винный бутик LE CORTE</a>
                         </li>
                         <li class="footer-submenu__item">
-                            <a href="#" class="footer-submenu__item-link">8 (812) 123-45-67</a>
+                            <a href="#" class="footer-submenu__item-link" aria-label="phone">8 (812) 123-45-67</a>
                         </li>
                         <li class="footer-submenu__item">
                             <div class="social">
@@ -219,7 +218,7 @@
                             </div>
                         </li>
                         <li class="footer-submenu__item">
-                            <a href="#" class="footer-submenu__item-link">© le-corte.ru</a>
+                            <a href="#" class="footer-submenu__item-link" aria-label="email">© le-corte.ru</a>
                         </li>
                     </ul>
                 </nav>
